@@ -1,6 +1,6 @@
 'use strict';
-import { FirebaseSwaggerUI, IAppOptions } from "./middleware/express.app.config";
+import { FirebaseSwaggerUI, IAppOptions } from "./middleware/firebase-swagger-ui";
 
-export function createFirebaseSwaggerUI(definitionPath: string, appOptions:IAppOptions): FirebaseSwaggerUI {
+export function create(definitionPath: string, appOptions:IAppOptions): FirebaseSwaggerUI {
   return new FirebaseSwaggerUI(definitionPath, appOptions);
 }

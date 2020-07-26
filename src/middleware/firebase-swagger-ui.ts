@@ -69,7 +69,7 @@ export class FirebaseSwaggerUI {
         }
     }
 
-    public getAppSwaggerUI(): express.Application {
+    public getExpressApp(): express.Application {
         return this.app;
     }
 
