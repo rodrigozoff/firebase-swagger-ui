@@ -1,3 +1,8 @@
-# fierbase-swagger-ui
+# Firebase-Swagger-UI
+
+Swagger UI
+OAS3
+Firebase-Authentication
+
 
 

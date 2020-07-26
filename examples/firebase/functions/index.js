@@ -13,7 +13,5 @@ var options = {
 };
 
 var swaggerUI = firebaseSwaggerUI.create(path.join(__dirname, 'api/openapi.yaml'), options);
-/*
-Object.assign(exports, expressAppConfig.getExportCloudFunction(functions.https.onRequest));
-*/
+
 exports.api = functions.https.onRequest(swaggerUI.getExpressApp());
