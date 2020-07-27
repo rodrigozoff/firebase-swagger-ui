@@ -8,10 +8,10 @@ const firebaseSwaggerUI = require('firebase-swagger-ui');
 
 // swaggerRouter configuration
 var options = {
-    prefix: "poc_",
     publicFolderPath: "public",
+    oasPathFile: path.join(__dirname, 'api/openapi.yaml')
 };
 
-var swaggerUI = firebaseSwaggerUI.create(path.join(__dirname, 'api/openapi.yaml'), options);
+var swaggerUI = firebaseSwaggerUI.create(options);
 
-exports.api = functions.https.onRequest(swaggerUI.getExpressApp());
+exports.api = functions.https.onRequest(swaggerUI.getAppExpress());
