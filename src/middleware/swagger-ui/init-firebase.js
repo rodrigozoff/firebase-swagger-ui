@@ -1,5 +1,6 @@
 (function() {
 
+
     async function loadJsonFirebaseConfig(url) {
 
         let obj = null;
@@ -95,6 +96,7 @@
                     cloneLogout.appendTo(padreBotones);
                     user.getIdToken().then(function(data) {
                         if (data) {
+                            localStorage.setItem("tokenfirebase", data);
                             ui.preauthorizeApiKey("firebaseAuth", data);
                         }
                     });

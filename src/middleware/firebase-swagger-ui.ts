@@ -1,6 +1,7 @@
 'use strict';
 
 import * as express from 'express';
+import * as cors from 'cors';
 import cookieParser = require('cookie-parser');
 import { SwaggerUI } from './swagger.ui';
 
@@ -10,7 +11,7 @@ import * as jsyaml from 'js-yaml';
 export interface IAppOptions {
     oas?: any;
     oasPathFile?: string;
-    publicFolderPath: string;
+    publicFolderPath: string
 }
 
 export class FirebaseSwaggerUI {
